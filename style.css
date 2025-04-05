@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(235, 160, 202);
+}
 .wrapper{
     display:flex;
     flex-direction: column;
@@ -14,12 +19,14 @@
     font-weight: 700;
     color: white;
     cursor: pointer;
+    border: none;
+    box-shadow: 5px 5px 2px rgba(0,0,0,0.5);
 }
 #play{
-    background-color: rgb(5, 115, 73);
+    background-color: rgb(4, 103, 48);
 }
 #pause{
-    background-color: rgb(163, 12, 5);
+    background-color: rgb(160, 29, 22);
 }
 .element{
     height:200px;
@@ -27,9 +34,11 @@
     margin: 7rem;
     font-weight: 700;
     font-size: 2.35rem;
-    background-color: rgb(255, 0, 195);
+    background-color: rgb(137, 79, 20);
     color: white;
-    animation: spin 1s;
+    border: none;
+    box-shadow: 10px 10px 5px rgba(0,0,0,0.3);
+    animation: spin 2s;
     animation-timing-function:ease;
     animation-delay: 1s;
     animation-iteration-count: infinite;
@@ -45,9 +54,12 @@ element:hover{
         transform: rotate(0deg);
         border-radius: 0%;
     }
+    33%{
+        transform: rotateX(180deg);
+    }
     50%{
-        scale: 1.8;
-        transform: rotate(0deg);
+        scale: 1.9;
+        transform: rotateY(180deg);
     }
     100%{
         transform: rotate(360deg);
