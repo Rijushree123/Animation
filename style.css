@@ -46,12 +46,12 @@ element:hover{
         border-radius: 0%;
     }
     50%{
-        scale: 2;
+        scale: 1.8;
         transform: rotate(0deg);
     }
     100%{
         transform: rotate(360deg);
         border-radius: 50%;
-        scale: 2;
+        scale: 1;
     }
 }
