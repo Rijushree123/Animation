@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Animation</title>
 </head>
+
 <body>
     <div class="wrapper">
         <button class="element">Mr Golu</button>
@@ -13,13 +15,41 @@
             <button class="control-button" id="play">Play</button>
             <button class="control-button" id="pause">Pause</button>
         </div>
+        <!-- <div>
+            <button class="control-button" id="rotateX">Rotate-X</button>
+            <button class="control-button" id="rotateY">Rotate-Y</button>
+        </div> -->
     </div>
     <script>
         const element = document.getElementsByClassName("element")[0];
         const play = document.getElementById("play");
         const pause = document.getElementById("pause");
-        play.addEventListener('click',()=>element.style.animationPlayState="running");
-        pause.addEventListener('click',()=>element.style.animationPlayState="paused");
+        const rotateX = document.getElementById("rotateX");
+        const rotateY = document.getElementById("rotateY");
+
+        // Play and Pause animation control
+        play.addEventListener('click', () => {
+            element.style.animationPlayState = "running";
+        });
+
+        pause.addEventListener('click', () => {
+            element.style.animationPlayState = "paused";
+        });
+
+        // // Rotate-X button functionality
+        // rotateX.addEventListener('click', () => {
+        //     element.style.animationPlayState = "paused"; // Pause animation when rotating
+        //     element.style.transition = "transform 0.5s ease"; // Apply transition for smooth rotation
+        //     element.style.transform = "rotateX(180deg)"; // Rotate the element on X-axis
+        // });
+
+        // // Rotate-Y button functionality
+        // rotateY.addEventListener('click', () => {
+        //     element.style.transition = "transform 0.5s ease"; // Apply transition for smooth rotation
+        //     element.style.transform = "rotateY(180deg)"; // Rotate the element on Y-axis
+        // });
+
     </script>
 </body>
+
 </html>
